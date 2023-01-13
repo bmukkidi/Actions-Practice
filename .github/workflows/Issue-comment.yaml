@@ -11,4 +11,15 @@ jobs:
       - name: "dump github content"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+      - name: Create-comment
+        uses: bmukkidi/actions@v1
+        with:
+          issue-number: |
+          body: |
+            this is a multiline test comment
+            - With GitHub ***MarkDown* : sparkle:
+            - Created by [create-or-update-commit][1]
+            
+            [1] https://github.com/marketplace/actions/create-or-update-comment
+            reaction: '+1'
       
