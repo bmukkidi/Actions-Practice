@@ -12,7 +12,7 @@ jobs:
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
       - name: Create-comment
-        uses: bmukkidi/create-or-update-comment@v1
+        uses: peter-events/create-or-update-comment@v1
         with:
           issue-number: |
           body: |
